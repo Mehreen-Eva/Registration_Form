@@ -1,0 +1,79 @@
+import 'package:flutter/material.dart';
+
+class RegistrationForm extends StatefulWidget {
+  const RegistrationForm({super.key});
+
+  @override
+  State<RegistrationForm> createState() =>
+      RegistrationFormState();
+}
+
+class RegistrationFormState extends State<RegistrationForm> {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Registration Form",
+          style: TextStyle(
+            color: Colors.green,
+          ),
+        ),
+      ),
+
+      body: Stack(
+        children: [
+          Container(
+            width: double.infinity,
+            height: double.infinity,
+
+            child: Image.asset(
+              "assets/images/background.jpg",
+              width: double.infinity,
+              height: double.infinity,
+              fit: BoxFit.fill,
+            ),
+          ),
+
+          Center(
+            child: Container(
+              width: 450,
+              height: 300,
+
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(
+                  color: Colors.white,
+                  width: 2,
+                ),
+              ),
+
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 45,
+                  horizontal: 20,
+                ),
+
+                child: TextField(
+                  decoration: InputDecoration(
+                    label: const Text("Name"),
+                    hintText: "Name",
+
+                    hintStyle: const TextStyle(
+                      color: Colors.black,
+                    ),
+
+                    labelStyle: const TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
